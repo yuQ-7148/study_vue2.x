@@ -7,14 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <button @click="flag = !flag">Toggle Flag</button>
+
+        <p v-if="flag">请求成功 --- 被 v-if 控制</p>
+
+        <p v-show="flag">请求成功 --- 被 v-show 控制</p>
+        
+    </div>
 
     <script src="./js/vue.js"></script>
     <script>
         const vm = new Vue({
             el: '#app',
             data: {
-                
+                //flag 用来控制元素的显示与隐藏
+                //true 显示元素 false 隐藏元素
+                flag: true,
             }
         })
     </script>
