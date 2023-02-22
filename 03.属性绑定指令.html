@@ -7,14 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <input type="text" :placeholder="inputValues">
+        <hr>
+        <img :src="imaSrc" alt="">
+    </div>
 
     <script src="./js/vue.min.js"></script>
     <script>
         const vm = new Vue({
             el: '#app',
             data: {
-                
+                inputValues: '请输入内容',
+                imaSrc: './images/logo.png'
             }
         })
     </script>
